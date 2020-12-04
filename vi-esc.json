@@ -1,0 +1,42 @@
+{
+	"title": "Vi Escape from KANA",
+	"maintainers": [
+		"xight"
+	],
+	"homepage": "https://github.com/xight/karabiner-elements-config",
+	"import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/xight/karabiner-elements-config/master/vi-esc.json",
+	"rules": [
+		{
+			"description": "ESC sends EISU ESC ESC when language is ja",
+				"manipulators": [
+					{
+						"type": "basic",
+						"from": {
+							"key_code": "escape"
+						},
+						"to": [
+							{
+								"key_code": "japanese_eisuu"
+							},
+							{
+								"key_code": "escape"
+							},
+							{
+								"key_code": "escape"
+							}
+						],
+						"conditions": [
+							{
+								"type": "input_source_if",
+								"input_sources": [
+									{
+										"language": "ja"
+									}
+								]
+							}
+						]
+					}
+				]
+		}
+	]
+}
