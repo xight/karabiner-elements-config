@@ -4,7 +4,7 @@
 		"xight"
 	],
 	"homepage": "https://github.com/xight/karabiner-elements-config",
-	"import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/xight/karabiner-elements-config/master/template.json",
+	"import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/xight/karabiner-elements-config/master/template/template.json",
 	"rules": [
 		{
 			"description": "desc",
