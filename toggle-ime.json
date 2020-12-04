@@ -17,10 +17,6 @@
 						"to": [
 							{
 								"key_code": "japanese_kana"
-							},
-							{
-								"shell_command": "osascript -e 'display notification \"Nortification Message\"'",
-								"halt": true
 							}
 						],
 						"conditions": [
@@ -42,10 +38,6 @@
 						"to": [
 							{
 								"key_code": "japanese_eisuu"
-							},
-							{
-								"shell_command": "osascript -e 'display notification \"Nortification Message\"'",
-								"halt": true
 							}
 						],
 						"conditions": [
