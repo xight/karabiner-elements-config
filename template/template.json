@@ -30,10 +30,13 @@
 							{
 								"type": "frontmost_application_if",
 								"bundle_identifiers": [
+									"com.apple.Terminal",
 									"com.googlecode.iterm2",
+									"org.vim.MacVim",
 									"com.github.atom",
 									"com.jetbrains.pycharm",
-									"com.visualstudio.code.oss"
+									"com.visualstudio.code.oss",
+									"com.microsoft.rdc.mac"
 								]
 							},
 							{
