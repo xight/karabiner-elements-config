@@ -1,0 +1,48 @@
+{
+	"title": "Title",
+	"maintainers": [
+		"xight"
+	],
+	"homepage": "https://github.com/xight/karabiner-elements-config",
+	"import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/xight/karabiner-elements-config/master/template.json",
+	"rules": [
+		{
+			"description": "desc",
+				"manipulators": [
+					{
+						"type": "basic",
+						"from": {
+							"key_code": "caps_lock"
+						},
+						"to": [
+							{
+								"set_variable": {
+									"name": "var_mode",
+									"value": 1
+								}
+							},
+							{
+								"shell_command": "osascript -e 'display notification \"Nortification Message\"'",
+								"halt": true
+							}
+						],
+						"conditions": [
+							{
+								"type": "frontmost_application_if",
+								"bundle_identifiers": [
+									"com.googlecode.iterm2",
+									"com.github.atom",
+									"com.jetbrains.pycharm",
+									"com.visualstudio.code.oss"
+								]
+							},
+							{
+								"name": "var_mode",
+								"type": "variable_unless",
+								"value": 1
+							}
+						]
+					}
+				]
+		}
+}

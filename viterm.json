@@ -1,0 +1,259 @@
+{
+	"title": "Terminal, Vim",
+	"maintainers": [
+		"xight"
+	],
+	"homepage": "https://github.com/xight/karabiner-elements-config",
+	"import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/xight/karabiner-elements-config/master/hogehoge.json",
+	"rules": [
+		{
+			"description": "Left Command to Left Control (Only Terminal, IDE, RDC)",
+				"manipulators": [
+					{
+						"type": "basic",
+						"from": {
+							"key_code": "left_command"
+						},
+						"to": {
+							"key_code": "left_control"
+						},
+						"conditions": [
+							{
+								"type": "frontmost_application_if",
+								"bundle_identifiers": [
+									"com.apple.Terminal",
+									"com.googlecode.iterm2",
+									"org.vim.MacVim",
+									"com.github.atom",
+									"com.jetbrains.pycharm",
+									"com.visualstudio.code.oss",
+									"com.microsoft.rdc.mac"
+								]
+							}
+						]
+					}
+				]
+		},
+		{
+			"description": "Left Control + Space to Left Command + Space (Only Terminal, IDE, RDC)",
+				"manipulators": [
+					{
+						"type": "basic",
+						"from": {
+							"key_code": "spacebar",
+							"modifiers":{
+								"mandatory": ["left_control"]
+							}
+						},
+						"to": {
+							"key_code": "spacebar",
+							"modifiers": ["left_command"]
+						},
+						"conditions": [
+							{
+								"type": "frontmost_application_if",
+								"bundle_identifiers": [
+									"com.apple.Terminal",
+									"com.googlecode.iterm2",
+									"org.vim.MacVim",
+									"com.github.atom",
+									"com.jetbrains.pycharm",
+									"com.visualstudio.code.oss",
+									"com.microsoft.rdc.mac"
+								]
+							}
+						]
+					}
+				]
+		},
+		{
+			"description": "Left Control + Tab to Left Command + Tab (Only Terminal, IDE, RDC)",
+				"manipulators": [
+					{
+						"type": "basic",
+						"from": {
+							"key_code": "tab",
+							"modifiers":{
+								"mandatory": ["left_control"]
+							}
+						},
+						"to": {
+							"key_code": "tab",
+							"modifiers": ["left_command"]
+						},
+						"conditions": [
+							{
+								"type": "frontmost_application_if",
+								"bundle_identifiers": [
+									"com.apple.Terminal",
+									"com.googlecode.iterm2",
+									"org.vim.MacVim",
+									"com.github.atom",
+									"com.jetbrains.pycharm",
+									"com.visualstudio.code.oss",
+									"com.microsoft.rdc.mac"
+								]
+							}
+						]
+					}
+				]
+		},
+		{
+			"description": "Left Control + Semicolon to Left Command + Secmicolon (Only Terminal, IDE, RDC)",
+				"manipulators": [
+					{
+						"type": "basic",
+						"from": {
+							"key_code": "semicolon",
+							"modifiers":{
+								"mandatory": ["left_control"]
+							}
+						},
+						"to": {
+							"key_code": "semicolon",
+							"modifiers": ["left_command"]
+						},
+						"conditions": [
+							{
+								"type": "frontmost_application_if",
+								"bundle_identifiers": [
+									"com.apple.Terminal",
+									"com.googlecode.iterm2",
+									"org.vim.MacVim",
+									"com.github.atom",
+									"com.jetbrains.pycharm",
+									"com.visualstudio.code.oss",
+									"com.microsoft.rdc.mac"
+								]
+							}
+						]
+					}
+				]
+		},
+		{
+			"description": "Right Command to Right Control (Only Terminal, IDE, RDC)",
+				"manipulators": [
+					{
+						"type": "basic",
+						"from": {
+							"key_code": "right_command"
+						},
+						"to": {
+							"key_code": "right_control"
+						},
+						"conditions": [
+							{
+								"type": "frontmost_application_if",
+								"bundle_identifiers": [
+									"com.apple.Terminal",
+									"com.googlecode.iterm2",
+									"org.vim.MacVim",
+									"com.github.atom",
+									"com.jetbrains.pycharm",
+									"com.visualstudio.code.oss",
+									"com.microsoft.rdc.mac"
+								]
+							}
+						]
+					}
+				]
+		},
+		{
+			"description": "Right Control + Space to Right Command + Space (Only Terminal, IDE, RDC)",
+				"manipulators": [
+					{
+						"type": "basic",
+						"from": {
+							"key_code": "spacebar",
+							"modifiers":{
+								"mandatory": ["right_control"]
+							}
+						},
+						"to": {
+							"key_code": "spacebar",
+							"modifiers": ["right_command"]
+						},
+						"conditions": [
+							{
+								"type": "frontmost_application_if",
+								"bundle_identifiers": [
+									"com.apple.Terminal",
+									"com.googlecode.iterm2",
+									"org.vim.MacVim",
+									"com.github.atom",
+									"com.jetbrains.pycharm",
+									"com.visualstudio.code.oss",
+									"com.microsoft.rdc.mac"
+								]
+							}
+						]
+					}
+				]
+		},
+		{
+			"description": "Right Control + Tab to Right Command + Tab (Only Terminal, IDE, RDC)",
+				"manipulators": [
+					{
+						"type": "basic",
+						"from": {
+							"key_code": "tab",
+							"modifiers":{
+								"mandatory": ["right_control"]
+							}
+						},
+						"to": {
+							"key_code": "tab",
+							"modifiers": ["right_command"]
+						},
+						"conditions": [
+							{
+								"type": "frontmost_application_if",
+								"bundle_identifiers": [
+									"com.apple.Terminal",
+									"com.googlecode.iterm2",
+									"org.vim.MacVim",
+									"com.github.atom",
+									"com.jetbrains.pycharm",
+									"com.visualstudio.code.oss",
+									"com.microsoft.rdc.mac"
+								]
+							}
+						]
+					}
+				]
+		},
+		{
+			"description": "Right Control + Semicolon to Right Command + Secmicolon (Only Terminal, IDE, RDC)",
+				"manipulators": [
+					{
+						"type": "basic",
+						"from": {
+							"key_code": "semicolon",
+							"modifiers":{
+								"mandatory": ["right_control"]
+							}
+						},
+						"to": {
+							"key_code": "semicolon",
+							"modifiers": ["right_command"]
+						},
+						"conditions": [
+							{
+								"type": "frontmost_application_if",
+								"bundle_identifiers": [
+									"com.apple.Terminal",
+									"com.googlecode.iterm2",
+									"org.vim.MacVim",
+									"com.github.atom",
+									"com.jetbrains.pycharm",
+									"com.visualstudio.code.oss",
+									"com.microsoft.rdc.mac"
+								]
+							}
+						]
+					}
+				]
+		}
+	]
+}
+
