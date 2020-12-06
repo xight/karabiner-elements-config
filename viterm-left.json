@@ -12,7 +12,10 @@
 					{
 						"type": "basic",
 						"from": {
-							"key_code": "caps_lock"
+							"key_code": "caps_lock",
+							"modifiers": {
+								"optional": ["any"]
+							}
 						},
 						"to": {
 							"key_code": "left_command"
@@ -40,7 +43,10 @@
 					{
 						"type": "basic",
 						"from": {
-							"key_code": "caps_lock"
+							"key_code": "caps_lock",
+							"modifiers": {
+								"optional": ["any"]
+							}
 						},
 						"to": {
 							"key_code": "left_command"
@@ -48,34 +54,6 @@
 						"conditions": [
 							{
 								"type": "frontmost_application_unless",
-								"bundle_identifiers": [
-									"com.apple.Terminal",
-									"com.googlecode.iterm2",
-									"org.vim.MacVim",
-									"com.github.atom",
-									"com.jetbrains.pycharm",
-									"com.visualstudio.code.oss",
-									"com.microsoft.rdc.mac"
-								]
-							}
-						]
-					}
-				]
-		},
-		{
-			"description": "Left Command to Left Control (Only Terminal, IDE, RDC)",
-				"manipulators": [
-					{
-						"type": "basic",
-						"from": {
-							"key_code": "left_command"
-						},
-						"to": {
-							"key_code": "left_control"
-						},
-						"conditions": [
-							{
-								"type": "frontmost_application_if",
 								"bundle_identifiers": [
 									"com.apple.Terminal",
 									"com.googlecode.iterm2",
