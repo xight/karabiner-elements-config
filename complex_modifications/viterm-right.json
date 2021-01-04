@@ -1,0 +1,289 @@
+{
+	"title": "Terminal, Vim (Caps Lock -> Right Control)",
+	"maintainers": [
+		"xight"
+	],
+	"homepage": "https://github.com/xight/karabiner-elements-config",
+	"import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/xight/karabiner-elements-config/master/viterm-right.json",
+	"rules": [
+		{
+			"description": "Caps Lock to Right Control (Only Terminal, IDE, RDC)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "caps_lock",
+						"modifiers": {
+							"optional": ["any"]
+						}
+					},
+					"to": {
+						"key_code": "right_control"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"org.virtualbox.app.VirtualBoxVM",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Caps Lock to Right Command (Unless Terminal, IDE, RDC)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "caps_lock",
+						"modifiers": {
+							"optional": ["any"]
+						}
+					},
+					"to": {
+						"key_code": "right_command"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"org.virtualbox.app.VirtualBoxVM",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Right Control + Space to Right Command + Space (Only Terminal, IDE, RDC)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "spacebar",
+						"modifiers":{
+							"mandatory": ["right_control"]
+						}
+					},
+					"to": {
+						"key_code": "spacebar",
+						"modifiers": ["right_command"]
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"org.virtualbox.app.VirtualBoxVM",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Right Control + Tab to Right Command + Tab (Only Terminal, IDE, RDC)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "tab",
+						"modifiers":{
+							"mandatory": ["right_control"]
+						}
+					},
+					"to": {
+						"key_code": "tab",
+						"modifiers": ["right_command"]
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"org.virtualbox.app.VirtualBoxVM",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Right Control + Semicolon to Right Command + Secmicolon (Only Terminal, IDE, RDC)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "semicolon",
+						"modifiers":{
+							"mandatory": ["right_control"]
+						}
+					},
+					"to": {
+						"key_code": "semicolon",
+						"modifiers": ["right_command"]
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"org.virtualbox.app.VirtualBoxVM",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Right Control + Space to Left Option + ` (Only VirtualBoxVM, RDC)",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "spacebar",
+						"modifiers": {
+							"mandatory": [
+								"right_control"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "grave_accent_and_tilde",
+							"modifiers": [
+								"left_option"
+							]
+						}
+					],
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"org.virtualbox.app.VirtualBoxVM",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Right Control + Left Shift + 3 to Right Command + Left Shift + 3 (Only Terminal, IDE, RDC)",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "3",
+						"modifiers": {
+							"mandatory": [
+								"right_control",
+								"left_shift"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "3",
+							"modifiers": [
+								"right_command",
+								"left_shift"
+							]
+						}
+					],
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"org.virtualbox.app.VirtualBoxVM",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Right Control + Left Shift + 4 to Right Command + Left Shift + 4 (Only Terminal, IDE, RDC)",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "4",
+						"modifiers": {
+							"mandatory": [
+								"right_control",
+								"left_shift"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "4",
+							"modifiers": [
+								"right_command",
+								"left_shift"
+							]
+						}
+					],
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"org.virtualbox.app.VirtualBoxVM",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					],
+					"type": "basic"
+				}
+			]
+		}
+	]
+}
+

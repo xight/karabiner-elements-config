@@ -1,0 +1,57 @@
+{
+	"title": "Toggle IME",
+	"maintainers": [
+		"xight"
+	],
+	"homepage": "https://github.com/xight/karabiner-elements-config",
+	"import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/xight/karabiner-elements-config/master/toggle-ime.json",
+	"rules": [
+		{
+			"description": "Use Option_R as Toggle KANA/EISUU",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "right_option"
+					},
+					"to": [
+						{
+							"key_code": "japanese_kana"
+						}
+					],
+					"conditions": [
+						{
+							"type": "input_source_if",
+							"input_sources": [
+								{
+									"language": "en"
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "right_option"
+					},
+					"to": [
+						{
+							"key_code": "japanese_eisuu"
+						}
+					],
+					"conditions": [
+						{
+							"type": "input_source_if",
+							"input_sources": [
+								{
+									"language": "ja"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

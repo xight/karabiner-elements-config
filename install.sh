@@ -1,5 +1,8 @@
 #!/bin/bash
 
+TARGET_ROOT=$HOME/.config/karabiner/assets/complex_modifications
+SOURCE_ROOT=$PWD/complex_modifications
+
 # relink target-file source-file
 relink() {
 	if [[ -h "$1" ]]; then
@@ -15,17 +18,15 @@ relink() {
 	fi
 }
 
-#DIR=$( cd "$( dirname "$0" )" && pwd )
-
-#IFS=\
-
-TARGET="$HOME/.config/karabiner/assets/complex_modifications"
+if [[ ! -e $TARGET_ROOT ]]; then
+	mkdir -p $TARGET_ROOT
+fi
 
 echo 'install start'
 
-for FILE in `find *.json -type f | awk -F"/" '{ print $NF }'`;
+for FILE in `find $SOURCE_ROOT/*.json -type f | awk -F"/" '{ print $NF }'`;
 do
-	relink $TARGET/$FILE $PWD/$FILE
+	relink $TARGET_ROOT/$FILE $SOURCE_ROOT/$FILE
 done
 
 echo "done"

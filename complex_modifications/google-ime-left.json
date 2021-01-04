@@ -1,0 +1,174 @@
+{
+	"title": "Google IME (Left Command)",
+	"maintainers": [
+		"xight"
+	],
+	"homepage": "https://github.com/xight/karabiner-elements-config",
+	"import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/xight/karabiner-elements-config/master/google-ime-left.json",
+	"rules": [
+		{
+			"description": "Left Command + T to F10 (only Google IME Japanese base / 半角英数に変換)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "t",
+						"modifiers":{
+							"mandatory": ["left_command"]
+						}
+					},
+					"to": [
+						{
+							"key_code": "F10"
+						}
+					],
+					"conditions": [
+						{
+							"type": "input_source_if",
+							"input_sources": [
+								{
+									"input_source_id": "com.google.inputmethod.Japanese.base"
+								}
+							]
+						},
+						{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Left Command + U to F6 (only Google IME Japanese base / 全角ひらがなに変換)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "u",
+						"modifiers":{
+							"mandatory": ["left_command"]
+						}
+					},
+					"to": [
+						{
+							"key_code": "f6"
+						}
+					],
+					"conditions": [
+						{
+							"type": "input_source_if",
+							"input_sources": [
+								{
+									"input_source_id": "com.google.inputmethod.Japanese.base"
+								}
+							]
+						},
+						{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Left Command + I to F7 (only Google IME Japanese base / 全角カタカナに変換)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "i",
+						"modifiers":{
+							"mandatory": ["left_command"]
+						}
+					},
+					"to": [
+						{
+							"key_code": "f7"
+						}
+					],
+					"conditions": [
+						{
+							"type": "input_source_if",
+							"input_sources": [
+								{
+									"input_source_id": "com.google.inputmethod.Japanese.base"
+								}
+							]
+						},
+						{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Left Command + O to F8 (only Google IME Japanese base / 半角に変換)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "o",
+						"modifiers":{
+							"mandatory": ["left_command"]
+						}
+					},
+					"to": [
+						{
+							"key_code": "f8"
+						}
+					],
+					"conditions": [
+						{
+							"type": "input_source_if",
+							"input_sources": [
+								{
+									"input_source_id": "com.google.inputmethod.Japanese.base"
+								}
+							]
+						},
+						{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": [
+								"com.apple.Terminal",
+								"com.googlecode.iterm2",
+								"org.vim.MacVim",
+								"com.github.atom",
+								"com.jetbrains.pycharm",
+								"com.visualstudio.code.oss",
+								"com.microsoft.rdc.mac"
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
