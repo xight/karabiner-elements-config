@@ -36,6 +36,7 @@
 							"bundle_identifiers": [
 								"com.apple.Terminal",
 								"com.googlecode.iterm2",
+								"net.kovidgoyal.kitty",
 								"org.vim.MacVim",
 								"com.qvacua.VimR",
 								"com.github.atom",
@@ -78,6 +79,7 @@
 							"bundle_identifiers": [
 								"com.apple.Terminal",
 								"com.googlecode.iterm2",
+								"net.kovidgoyal.kitty",
 								"org.vim.MacVim",
 								"com.qvacua.VimR",
 								"com.github.atom",
@@ -120,6 +122,7 @@
 							"bundle_identifiers": [
 								"com.apple.Terminal",
 								"com.googlecode.iterm2",
+								"net.kovidgoyal.kitty",
 								"org.vim.MacVim",
 								"com.qvacua.VimR",
 								"com.github.atom",
@@ -162,6 +165,7 @@
 							"bundle_identifiers": [
 								"com.apple.Terminal",
 								"com.googlecode.iterm2",
+								"net.kovidgoyal.kitty",
 								"org.vim.MacVim",
 								"com.qvacua.VimR",
 								"com.github.atom",
