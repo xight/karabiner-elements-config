@@ -1,0 +1,70 @@
+{
+	"title": "for Alfred (Left Command)",
+	"maintainers": [
+		"xight"
+	],
+	"homepage": "https://github.com/xight/karabiner-elements-config",
+	"import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/xight/karabiner-elements-config/master/alfred-left.json",
+	"rules": [
+		{
+			"description": "Left Command + Enter to Enter (Alfred only)",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "return_or_enter",
+						"modifiers": {
+							"mandatory": [
+								"left_command"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "return_or_enter",
+							"modifiers": []
+						}
+					],
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"^com\\.runningwithcrayons\\.Alfred"
+							]
+						}
+					],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Left Control + Enter to Enter (Alfred only)",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "return_or_enter",
+						"modifiers": {
+							"mandatory": [
+								"left_control"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "return_or_enter",
+							"modifiers": []
+						}
+					],
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"^com\\.runningwithcrayons\\.Alfred"
+							]
+						}
+					],
+					"type": "basic"
+				}
+			]
+		}
+	]
+}
