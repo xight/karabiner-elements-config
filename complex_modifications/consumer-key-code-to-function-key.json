@@ -1,0 +1,135 @@
+{
+	"title": "Consumer key code to Function 1..12 key (For Buffalo BT5 Keyboard)",
+	"maintainers": [
+		"xight"
+	],
+	"homepage": "https://github.com/xight/karabiner-elements-config",
+	"import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/xight/karabiner-elements-config/master/consumer-key-code-to-function-key.json",
+	"rules": [
+		{
+			"description": "customer_key_code-> function keys",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"consumer_key_code": "display_brightness_decrement"
+					},
+					"to": {
+							"key_code": "f1"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"consumer_key_code": "display_brightness_increment"
+					},
+					"to": {
+							"key_code": "f2"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"modifiers": {
+							"mandatory" : ["left_command"]
+						},
+						"key_code": "tab"
+					},
+					"to": {
+							"key_code": "f3"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"modifiers": {
+							"mandatory" : ["left_command"]
+						},
+						"key_code": "spacebar"
+					},
+					"to": {
+							"key_code": "f4"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"modifiers": {
+							"mandatory" : ["left_command"]
+						},
+						"key_code": "h"
+					},
+					"to": {
+							"key_code": "f5"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"modifiers": {
+							"mandatory" : ["left_command", "left_shift"]
+						},
+						"key_code": "3"
+					},
+					"to": {
+							"key_code": "f6"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"consumer_key_code":"scan_previous_track"
+					},
+					"to": {
+							"key_code": "f7"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"consumer_key_code":"play_or_pause"
+					},
+					"to": {
+							"key_code": "f8"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"consumer_key_code":"scan_next_track"
+					},
+					"to": {
+							"key_code": "f9"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"consumer_key_code":"mute"
+					},
+					"to": {
+							"key_code": "f10"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"consumer_key_code":"volume_decrement"
+					},
+					"to": {
+							"key_code": "f11"
+					}
+				},
+				{
+					"type": "basic",
+					"from": {
+						"consumer_key_code":"volume_increment"
+					},
+					"to": {
+							"key_code": "f12"
+					}
+				}
+			]
+		}
+	]
+}
